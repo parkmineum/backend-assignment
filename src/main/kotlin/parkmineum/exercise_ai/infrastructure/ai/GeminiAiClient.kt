@@ -12,7 +12,7 @@ import org.springframework.web.client.RestClient
 class GeminiAiClient(
     @Value("\${ai.gemini.api-key}") private val apiKey: String,
     @Value("\${ai.gemini.base-url:https://generativelanguage.googleapis.com/v1beta}") private val baseUrl: String,
-    @Value("\${ai.gemini.model:gemini-1.5-flash}") private val defaultModel: String
+    @Value("\${ai.gemini.model:gemini-2.5-flash}") private val defaultModel: String
 ) : AiClient {
     private val logger = LoggerFactory.getLogger(javaClass)
     private val restClient = RestClient.builder().baseUrl(baseUrl).build()
