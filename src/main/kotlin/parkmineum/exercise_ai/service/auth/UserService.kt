@@ -1,4 +1,4 @@
-package parkmineum.exercise_ai.service
+package parkmineum.exercise_ai.service.auth
 
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
@@ -16,8 +16,8 @@ import parkmineum.exercise_ai.repository.UserRepository
  * 사용자 기반의 비즈니스 로직(회원가입, 로그인)을 처리하는 서비스입니다.
  *
  * [설계 의도]
- * - 도메인 응집도: 현재 규모에서는 User 도메인의 생명주기를 한 서비스에서 관리하는 것이 가장 명확하다고 판단했습니다.
- * - 확장 고려: 향후 외부 연동이나 보안 정책 확장 시, 기능 단위로 서비스 분리가 가능하도록 메서드 책임을 분리했습니다.
+ * - 도메인 응집도: 현재 규모에서는 User 도메인의 생명주기를 한 서비스에서 관리하는 것이 명확하다고 판단
+ * - 확장 고려: 향후 외부 연동이나 보안 정책 확장 시, 기능 단위로 서비스 분리가 가능하도록 메서드 책임을 분리
  */
 @Service
 class UserService(

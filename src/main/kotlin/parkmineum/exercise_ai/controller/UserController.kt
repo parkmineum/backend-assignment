@@ -7,7 +7,7 @@ import parkmineum.exercise_ai.common.ApiResponse
 import parkmineum.exercise_ai.dto.AuthResponse
 import parkmineum.exercise_ai.dto.LoginRequest
 import parkmineum.exercise_ai.dto.SignupRequest
-import parkmineum.exercise_ai.service.UserService
+import parkmineum.exercise_ai.service.auth.UserService
 
 @RestController
 @RequestMapping("/api/v1/users")
