@@ -27,6 +27,7 @@ logging:
     root: INFO
     parkmineum.exercise_ai: DEBUG
 
+# .env 활용을 통해 보안상 git에 올리지 않아야 하지만, 과제 특성상 API KEY를 코드에 포함하였습니다.
 jwt:
   secret: ${JWT_SECRET:vipsionicaiassignmentsecretkeywhichislongenoughforhcames512}
   expiration: 86400000   # 24 hours
