@@ -1,4 +1,3 @@
-# 운동 가이드 AI 과제 백엔드
 
 ### 1. 설계 핵심 요약
 - 비동기 AI 처리: 외부 API(Gemini) 호출 시 DB 커넥션 점유를 방지하기 위해 CompletableFuture 사용 및 트랜잭션 분리(ChatTxService).
