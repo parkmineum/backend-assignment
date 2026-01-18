@@ -1,6 +1,7 @@
 package parkmineum.exercise_ai.controller
 
 import io.swagger.v3.oas.annotations.Operation
+import io.swagger.v3.oas.annotations.tags.Tag
 import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.*
 import parkmineum.exercise_ai.common.ApiResponse
@@ -9,6 +10,7 @@ import parkmineum.exercise_ai.dto.LoginRequest
 import parkmineum.exercise_ai.dto.SignupRequest
 import parkmineum.exercise_ai.service.auth.UserService
 
+@Tag(name = "User", description = "사용자 관리 API")
 @RestController
 @RequestMapping("/api/v1/users")
 class UserController(

@@ -32,6 +32,7 @@ class SecurityConfig(
             .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
             .authorizeHttpRequests {
                 it.requestMatchers("/api/v1/users/signup", "/api/v1/users/login").permitAll()
+                it.requestMatchers("/h2-console/**").permitAll()
                 it.requestMatchers(
                     "/v3/api-docs/**",
                     "/swagger-ui/**",
@@ -41,6 +42,7 @@ class SecurityConfig(
                 ).permitAll()
                 it.anyRequest().authenticated()
             }
+            .headers { it.frameOptions { it.disable() } }
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter::class.java)
 
         return http.build()
